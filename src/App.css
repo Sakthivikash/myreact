@@ -1,38 +1,72 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-family: sans-serif;
+  display: grid;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  
+}
+#main {
+  border: 3px solid rgb(10, 3, 77);
+  margin: 20px;
+  display: flex;
+  width: 650px;
+  border-radius: 15px;
+  background-color: rgb(213, 231, 255);
+}
+.image {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+}
+.img {
+  height: 100%;
+  width: 300PX;
+  text-align: left;
+  object-fit:fill;
+  border-radius: 10px;
+  border:3px dashed rgb(3, 4, 83) ;
+  margin: 5px;
+  box-shadow: 5px 5px rgb(107, 105, 105);
+}
+h2{
+  color: rgb(101, 6, 124);
+  text-shadow: 2px 2px 2px rgb(62, 220, 231);
+}
+#content{
+  margin: 10px;
+  align-items: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: rgb(55, 6, 88);
+}
+.btn{
+  display: flex;
+}
+button{
+  width: 70px;
+  height: 30px;
+  margin:5px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 2px 2px 2px rgb(233, 240, 240), 3px 5px 12px rgb(68, 68, 70);
+
+}
+.like:hover{
+  background-color: rgb(3, 70, 25);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.deslike:hover{
+  background-color: rgb(179, 35, 6);
+  color: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+i:hover{
+  color: white;
+}
+.like{
+  background-color: rgb(9, 240, 124);
+}
+.deslike{
+  background-color: tomato;
+}
+i{
+  color: blue;
 }
