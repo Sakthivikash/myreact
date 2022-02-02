@@ -116,7 +116,8 @@ function Welcome({ name, image, summary, director, music, rating}) {
   const styles= {
     color: rating >= 7.5 ? "green" : "red",
   }
-  
+  const [show,setshow]= useState(true);
+ 
   return (
       <div id="main">
         <div className="image">
@@ -124,7 +125,14 @@ function Welcome({ name, image, summary, director, music, rating}) {
         </div>
         <div id="content">
           <h2><b>Movie Name: </b>{name}</h2>
-          <div><b>Summary:</b>{summary}</div>
+          <div>
+          <Button id='togbtn' variant="outlined" onClick={() => setshow(!show)} >Toggle Description</Button>
+            {
+              show ? <div><b>Summary:</b>{summary}</div> : null
+            }
+           
+          </div>
+         
           <div><b>Director:</b>{director}</div>
           <div><b>Music:</b>{music}</div>
           <div><b>Rating: <i class="fa fa-star"></i> </b><span style={styles}>{rating}</span></div>
