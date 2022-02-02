@@ -1,53 +1,119 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
 .App {
-  font-family: sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  justify-self: center;
+  padding: 10px;
+  background-color: rgb(241, 217, 241);
+}
+h1{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  background-image: linear-gradient(to right, rgb(14, 205, 230) , rgb(231, 7, 131));
+  margin: 10px;
+  padding: 10px;
+  color: aliceblue;
+  box-shadow: inset 5px 5px 12px rgb(107, 105, 105),inset -5px -5px 12px rgb(107, 105, 105);
+}
+.inputdata{
   display: grid;
   justify-content: center;
-  
-}
-#main {
-  border: 3px solid rgb(10, 3, 77);
-  margin: 20px;
-  display: flex;
-  width: 650px;
-  border-radius: 15px;
-  background-color: rgb(213, 231, 255);
-}
-.image {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
+  background-color: rgb(198, 238, 252);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: inset 5px 5px 3px rgb(175, 173, 173), 5px 5px 5px rgb(128, 126, 126);
   margin: 10px;
 }
-.img {
-  height: 100%;
-  width: 300PX;
-  text-align: left;
-  object-fit:fill;
-  border-radius: 10px;
-  border:3px dashed rgb(3, 4, 83) ;
+.inputs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+input{
+  width: 500px;
+  height: 50px;
   margin: 5px;
-  box-shadow: 5px 5px rgb(107, 105, 105);
+  padding: 5px;
+  font-size: 16px;
+  background-image: linear-gradient(to left, rgb(245, 245, 71) ,white);
+  border-radius: 5px;
+  box-shadow: inset 5px 5px 5px rgb(167, 164, 164),inset -5px -5px 5px rgb(206, 201, 201);
+}
+#addbtn{
+  text-align: center;
+}
+.button{
+  align-items: center;
+  width: 400px;
+  height: 40px;
+  background-color: rgb(10, 241, 114);
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
+}
+.button:hover{
+  background-color: rgb(7, 204, 95);
+  color: white;
+  zoom: 99%;
+}
+.container{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+#main {
+  margin: 10px;
+  width: 320px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  height: 850px;
+  background-color: white;
+  box-shadow: inset 5px 5px 12px rgb(107, 105, 105),inset -5px -5px 12px rgb(107, 105, 105);
+}
+.image {
+ padding: 10px; 
+ background-color: white;
+ box-shadow: inset 5px 5px 12px rgb(107, 105, 105),inset -5px -5px 12px rgb(107, 105, 105);
+}
+.img { 
+  height: 400px;
+  width: 290px;
+  object-fit:cover;
+  border-radius: 10px;
+  margin: 5px;
+ 
 }
 h2{
   color: rgb(101, 6, 124);
   text-shadow: 2px 2px 2px rgb(62, 220, 231);
+  margin: 10px 0px;
 }
 #content{
   margin: 10px;
+  width: 290px;
+  background-color:  rgb(216, 204, 252);
+  border-radius: 5px;
   align-items: center;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: rgb(55, 6, 88);
+  
 }
-.btn{
+/* .btn{
   display: flex;
-}
+} */
 button{
   width: 70px;
   height: 30px;
   margin:5px;
   border: none;
   border-radius: 5px;
-  box-shadow: inset 2px 2px 2px rgb(233, 240, 240), 3px 5px 12px rgb(68, 68, 70);
+  box-shadow: inset 1px 1px 2px rgb(233, 240, 240), 3px 5px 5px rgb(68, 68, 70);
 
 }
 .like:hover{
@@ -55,8 +121,8 @@ button{
   color: white;
 }
 .deslike:hover{
-  background-color: rgb(179, 35, 6);
-  color: white;
+  background-color: rgb(175, 7, 44);
+  color: rgb(255, 255, 255);
 }
 i:hover{
   color: white;
@@ -65,8 +131,9 @@ i:hover{
   background-color: rgb(9, 240, 124);
 }
 .deslike{
-  background-color: tomato;
+  background-color: rgb(243, 37, 37);
 }
 i{
-  color: blue;
+  color: rgb(248, 233, 18);
+  text-shadow: 2px 2px rgb(112, 109, 109);
 }
