@@ -1,6 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Rating from '@mui/material/Rating';
+import Typography from '@mui/material/Typography';
 
 export default function App() {
 
@@ -61,26 +65,34 @@ const [rating,setrating]=useState("");
       <h1>MOVIES LIST</h1>
       <div className='inputdata'>
       <div className='inputs'>
-        <input placeholder='Enter the image URL' onChange={(event) => setimage(event.target.value)}/>
-        <input placeholder='Enter the movie name' onChange={(event) => setname(event.target.value)}/>
-        <input placeholder='Enter the movie summary' onChange={(event) => setsummary(event.target.value)}/>
-        <input placeholder='Enter the director name' onChange={(event) => setdirect(event.target.value)}/>
-        <input placeholder='Enter the music director name' onChange={(event) => setmusic(event.target.value)}/>
-        <input placeholder='Enter the rating of the movie' onChange={(event) => setrating(event.target.value)}/>
+      <TextField id="outlined-basic" label="Enter the image URL" 
+       onChange={(event) => setimage(event.target.value)} variant="outlined" /> <br/>
+      <TextField id="outlined-basic" label="Enter the movie name" variant="outlined" 
+        onChange={(event) => setname(event.target.value)}/><br/>
+      <TextField id="outlined-basic" label="Enter the movie summary" variant="outlined" 
+        onChange={(event) => setsummary(event.target.value)}/><br/>
+      <TextField id="outlined-basic" label="Enter the director name"
+        onChange={(event) => setdirect(event.target.value)} variant="outlined" /><br/>
+      <TextField id="outlined-basic" label='Enter the music director name' 
+        onChange={(event) => setmusic(event.target.value)} variant="outlined" />  <br/>
+      <TextField id="outlined-basic" label='Enter the rating of the movie' 
+        onChange={(event) => setrating(event.target.value)} variant="outlined" /><br/>
+       
       </div>
-      <div id='addbtn'><button className='button'
-      onClick={()=>{
+      <div id='addbtn'>
+         <Button className="addbtn" variant="contained" onClick={()=>{
         const addmovie={
           name: name,
           image: image,
           summary:summary,
-          direct:direct,
+          director:direct,
           music: music,
           rating:rating
         };
-        setmovieslist([addmovie,...movieslist])
-      }}
-      >Add The Movie</button></div>
+          setmovieslist([addmovie,...movieslist])
+         }}>Add the Movie</Button>
+      </div>
+     
     </div>
    
       <div  className='container'>
@@ -117,10 +129,14 @@ function Welcome({ name, image, summary, director, music, rating}) {
           <div><b>Music:</b>{music}</div>
           <div><b>Rating: <i class="fa fa-star"></i> </b><span style={styles}>{rating}</span></div>
           <div className='btn' >
-            <div><button className='like' onClick={() => {setlike(like + 1);}}>
-            <i class="fa fa-thumbs-up" aria-hidden="true"></i> {like}</button></div>
-            <div><button className='deslike' onClick={() => {setdeslike(deslike + 1);}}>
-            <i class="fa fa-thumbs-down" aria-hidden="true"></i> {deslike}</button></div>
+            <div>
+              <Button variant="contained" className='like' onClick={() => {setlike(like + 1);}}>
+              <i class="fa fa-thumbs-up" aria-hidden="true"></i> {like}</Button>
+            </div>
+            <div>
+              <Button variant="contained" className='deslike' onClick={() => {setdeslike(deslike + 1);}}>
+              <i class="fa fa-thumbs-down" aria-hidden="true"></i> {deslike}</Button>
+            </div>
           </div>
         </div>
       </div>

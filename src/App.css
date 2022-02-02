@@ -12,8 +12,6 @@
 h1{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
-  position: sticky;
-  top: 0;
   background-image: linear-gradient(to right, rgb(14, 205, 230) , rgb(231, 7, 131));
   margin: 10px;
   padding: 10px;
@@ -32,34 +30,35 @@ h1{
 .inputs{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  row-gap: 20px;
 }
-input{
+#outlined-basic{
   width: 500px;
-  height: 50px;
-  margin: 5px;
+  height: 20px;
+  margin: 10px;
   padding: 5px;
   font-size: 16px;
-  background-image: linear-gradient(to left, rgb(245, 245, 71) ,white);
+  background-color: white;
+  /* background-image: linear-gradient(to left, rgb(245, 245, 71) ,white); */
   border-radius: 5px;
   box-shadow: inset 5px 5px 5px rgb(167, 164, 164),inset -5px -5px 5px rgb(206, 201, 201);
 }
 #addbtn{
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
-.button{
+.addbtn{
   align-items: center;
   width: 400px;
   height: 40px;
-  background-color: rgb(10, 241, 114);
+  margin: 10px;
+  /* background-color: rgb(10, 241, 114); */
   font-size: 20px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 600;
-}
-.button:hover{
-  background-color: rgb(7, 204, 95);
-  color: white;
-  zoom: 99%;
 }
 .container{
   display: flex;
@@ -104,9 +103,10 @@ h2{
   color: rgb(55, 6, 88);
   
 }
-/* .btn{
+.btn{
   display: flex;
-} */
+  gap: 10px;
+}
 button{
   width: 70px;
   height: 30px;
@@ -116,14 +116,7 @@ button{
   box-shadow: inset 1px 1px 2px rgb(233, 240, 240), 3px 5px 5px rgb(68, 68, 70);
 
 }
-.like:hover{
-  background-color: rgb(3, 70, 25);
-  color: white;
-}
-.deslike:hover{
-  background-color: rgb(175, 7, 44);
-  color: rgb(255, 255, 255);
-}
+
 i:hover{
   color: white;
 }
