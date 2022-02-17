@@ -1,17 +1,29 @@
 import { useParams } from "react-router-dom";
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { useState, useEffect } from 'react';
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { API } from "./global";
 import Button from '@mui/material/Button';
 
 export function MovieDetails({ movielist }) {
     
   const { id } = useParams();
+  const [movie, setmovie] = useState({});
 
-  let movie = movielist[id];
+  const getMovies = () => {
+    fetch(`${API}/${id}`, 
+    {method: "GET",}) // promise
+    .then((data) => data.json()) // Response object
+    .then((mvs) => setmovie(mvs))
+    .catch((err) => console.log(err));
+  };
+  
+  useEffect(() => getMovies(), []);
+
 
   const history = useHistory();
   return (
-    <div>
-      <h2>Movie Name: {movie.name}</h2>
+    <div className="box">
+      <h1>Movie Name: {movie.name}</h1>
       <iframe
         width="100%"
         height="600px"
@@ -24,13 +36,10 @@ export function MovieDetails({ movielist }) {
         <div><b>Rating: <i class="fa fa-star"></i> </b>
           <span style={{ color: movie.rating >= 7.5 ? "green" : "red" }}
           >{movie.rating}</span></div>
-        <Button
-          className="addbtn"
-          variant="contained"
-          style={{ width: "50px", margin: "20px" }}
-          onClick={() => history.goBack()}>Back</Button>
       </div>
-
+      <Button variant="contained"
+          style={{ width: "200px", margin: "20px" }}
+          onClick={() => history.goBack()}>Back</Button>
     </div>
   );
 }

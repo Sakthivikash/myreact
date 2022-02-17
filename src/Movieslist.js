@@ -1,23 +1,52 @@
 import { movielist } from "./movielist";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Movie } from "./Movie";
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { API } from "./global";
 
-export function Movieslist({ list }) {
-  console.log(list);
 
-  const [mvlist, setmvlist] = useState(list);
+export function Movieslist() {
+  
+const [mvlist, setMvList] = useState([]);
+const history= useHistory();
+ 
+  // useEffect(() => {
+   
+  //   return fetch(API,{
+  //     method: "GET",
+  //   }) // promise
+  //     .then((mvs) => mvs.json()) // Response object
+  //     .then((data) => setMvList(data));
+     
+  // }, []);
+
+  const getMovies = () => {
+    fetch(API, 
+    {method: "GET",}) // promise
+    .then((data) => data.json()) // Response object
+    .then((mvs) => setMvList(mvs));};
+
+    useEffect(() => getMovies(), []);
+
+    // Delete movie -> Refresh data
+    const deleteMovie = (id) => {
+      fetch(`${API}/${id}`,
+       {method: "DELETE",})
+       .then(() => getMovies());
+      };
+ 
  
   return (
-    <div>
-      <h2 className="title">MOVIES LIST</h2>
+    <div className="box">
+      <h1 className="title">MOVIES LIST</h1>
       <div className="container">
         {mvlist.map(
-          ({ name, image, summary, director, music, rating }, index) => (
+          ({ name, image, summary, director, music, rating,id }, index) => (
             <Movie
-              key={index}
+            key={index}
               name={name}
               image={image}
               summary={summary}
@@ -30,12 +59,7 @@ export function Movieslist({ list }) {
                   style={{marginLeft:"auto"}}
                   size="large"
                   color="error"
-                  onClick={() => {
-                    const copyList = [...mvlist];
-                    copyList.splice(index, 1);
-                    setmvlist(copyList);
-                    console.log(copyList);
-                  }}
+                  onClick={() => deleteMovie(id)}
                 >
                   <DeleteIcon />
                 </IconButton>
@@ -44,15 +68,15 @@ export function Movieslist({ list }) {
                 <IconButton
                 aria-label="edit"
                 size="large"
-                color="primary"
-                  onClick={() => {
-                    console.log(index);
-                  }}
+                color="secondary"
+                  onClick={() => 
+                   history.push(`/movie/edit/${id}`)
+                  }
                 >
                 <EditIcon />
                 </IconButton>
               }
-              id={index}
+              id={id}
             />
           )
         )}
@@ -60,3 +84,11 @@ export function Movieslist({ list }) {
     </div>
   );
 }
+
+
+
+
+
+// Delete movie -> Refresh data
+
+

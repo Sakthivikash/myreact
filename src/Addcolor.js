@@ -13,7 +13,10 @@ export function Addcolor() {
   };
   const [colorlist, setcolorlist] = useState(["blue", "orange", "pink", "yellow"]);
   return (
+    <div id='color-box'>
+      <h1 className="title">Color Game</h1>
     <div className="color" style={style1}>
+      
       <input type="text"
         id="clr"
         style={styles}
@@ -23,6 +26,8 @@ export function Addcolor() {
       }}>Add Color</button>
       {colorlist.map((e) => (<Colorbox color={e} />))}
     </div>
+  </div>
+    
 
   );
 }

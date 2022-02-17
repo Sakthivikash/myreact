@@ -1,5 +1,5 @@
 [
-  {
+  { "trailer":"https://www.youtube.com/embed/oI4n3DibqkA",
     "id": "100",
     "name": "Nanban",
     "image": "https://m.media-amazon.com/images/M/MV5BNDhhM2FmNDAtN2YwMS00ZWIxLTlhZjItOGU1OGMzYjRmZmIxXkEyXkFqcGdeQXVyOTk3NTc2MzE@._V1_.jpg",
@@ -8,7 +8,7 @@
     "music": "Harris Jayaraj",
     "rating": 7.7
   },
-  {
+  { "trailer":"https://www.youtube.com/embed/PGIIbk1GilE",
     "id": "101",
     "name": "Sachein",
     "image": "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/dd215695f0ebc036b42fef3555b0fa1fcbbe5086cf7e371caa876002a224474a._RI_V_TTW_.jpg",
@@ -17,7 +17,7 @@
     "music": "Devi Sri Prasad",
     "rating": 7.4
   },
-  {
+  { "trailer":"https://www.youtube.com/embed/W5MWxO6JABA",
     "id": "102",
     "name": "Mersal",
     "image": "https://m.media-amazon.com/images/M/MV5BNmY2Mzg3NGEtZDg0Yy00MTJmLWI3YjQtZGFlNDliMjZiNDNmXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg",
@@ -26,7 +26,7 @@
     "music": "A.R.Rahman",
     "rating": 7.8
   },
-  {
+  { "trailer":"https://www.youtube.com/embed/2KQP7YvJ9vs",
     "id": "103",
     "name": "Kutty",
     "image": "https://static.digit.in/OTT/images/tr:w-1200/kutty-2010-5f78407a6eb2cc0b7313a3e4.jpg",
@@ -35,7 +35,7 @@
     "music": "Devi Sri Prasad",
     "rating": 5.3
   },
-  {
+  { "trailer":"https://www.youtube.com/embed/lB3ih0kWejg",
     "id": "104",
     "name": "Santosh Subramaniam",
     "image": "https://images-na.ssl-images-amazon.com/images/I/91qa0KtSGQL._RI_.jpg",
