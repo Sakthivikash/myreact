@@ -25,7 +25,7 @@ export function Movie({ name, image, summary, director, music, rating,deletebutt
         <img className="img" src={image} alt="profileimg" />
       </div>
       <CardContent id="content">
-        <h2>Movie Name: {name}</h2>
+        <h2>{name}</h2>
         <span>
           <IconButton aria-label="toggle-summary" color='primary' onClick={() => setshow(!show)}>
             {!show ? <ExpandLessIcon /> : <ExpandMoreIcon />}

@@ -59,7 +59,7 @@ function EditMovieForm({movie}){
   const history= useHistory();
   const formik = useFormik({
     initialValues: {
-      image: movie.image,
+      image: movie.poster,
       name: movie.name,
       summary: movie.summary,
       direct: movie.director ,

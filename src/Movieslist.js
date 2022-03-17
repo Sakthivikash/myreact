@@ -44,11 +44,11 @@ const history= useHistory();
       <h1 className="title">MOVIES LIST</h1>
       <div className="container">
         {mvlist.map(
-          ({ name, image, summary, director, music, rating,id }, index) => (
+          ({ name, poster, summary, director, music, rating,id }, index) => (
             <Movie
             key={index}
               name={name}
-              image={image}
+              image={poster}
               summary={summary}
               director={director}
               music={music}
